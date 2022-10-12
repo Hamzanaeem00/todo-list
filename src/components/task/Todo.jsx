@@ -13,7 +13,6 @@ const Todo = () => {
   const addData = (e) => {
     e.preventDefault();
     let List = []
-
     const id = Math.random()
     List.push({
       Id: id,
@@ -69,8 +68,11 @@ const Todo = () => {
     }
     let timeTaken = performance.now() - start;
        Math.round(timeTaken)
-
-    console.log("Total time taken : " + timeTaken + " milliseconds");
+       console.log("Total time taken : " + timeTaken + " milliseconds");
+       const convertToSec = timeTaken/1000
+       console.log("seconds>>>>", convertToSec);
+       const  convertToMinute = timeTaken/60000 
+        console.log("Minutee>>>",convertToMinute);
   }
 
   return (
